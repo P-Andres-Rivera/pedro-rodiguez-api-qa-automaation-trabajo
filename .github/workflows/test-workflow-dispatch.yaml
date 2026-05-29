@@ -1,0 +1,55 @@
+name: Karate Tests by Tag (On Demand)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to execute (e.g., @loginSuccess, @registerUser, @all)'
+        required: true
+        default: '@all'
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      # 1. Clonar repositorio
+      - name: Clonar repositorio
+        uses: actions/checkout@v6
+
+      # 2. Configurar Java Corretto 11
+      - name: Configurar Java Corretto 11 y Maven
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'corretto'
+          java-version: '11'
+
+      # 3. Descargar dependencias del proyecto
+      - name: Descargar dependencias del proyecto
+        run: mvn dependency:resolve
+
+      # 4. Ejecutar pruebas Karate por TAG
+      - name: Ejecutar pruebas Karate con TAG
+        run: mvn clean test -Dkarate.options="--tags ${{ github.event.inputs.tag }}"
+
+      # 5. Generar reporte de pruebas
+      - name: Generar reporte de pruebas
+        run: mvn surefire-report:report
+        if: always()
+
+      # 6. Subir reporte de pruebas como artefacto
+      - name: Subir reporte de pruebas como artefacto
+        uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: karate-reports-${{ github.event.inputs.tag }}
+          path: target/karate-reports/
+          retention-days: 30
+
+      # 7. Subir HTML report
+      - name: Subir HTML summary report
+        uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: karate-summary-${{ github.event.inputs.tag }}
+          path: target/karate-reports/karate-summary.html
