@@ -9,5 +9,16 @@
   "loginUser" : {
     "email": "#(email)",
     "password": "#(password)"
+  },
+  "registerNewProduct" : {
+    "codigo": "#(codigo)",
+    "nombre": "#(nombre)",
+    "medida": "#(medida)",
+    "marca": "#(marca)",
+    "categoria": "#(categoria)",
+    "precio": "#(precio)",
+    "stock": "#(stock)",
+    "estado": "#(estado)",
+    "descripcion": "#(descripcion)"
   }
 }

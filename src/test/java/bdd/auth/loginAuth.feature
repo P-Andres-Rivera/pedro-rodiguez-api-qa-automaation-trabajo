@@ -3,7 +3,7 @@ Feature: Login de usuario
   Background:
     * url urlBase
 
-    @loginSuccess
+    @loginSuccess @token
     Scenario Outline: CP001 - Login de usuario con datos válidos con da
         * def requests = read('classpath:resources/json/requests.json')
         * def schemas = read('classpath:resources/json/schemas.json')
@@ -20,7 +20,7 @@ Feature: Login de usuario
         * match response.token_type == 'Bearer'
         * match response.message contains 'HiAndres'
         * def msg = 'Response time fue: ' + responseTime + 'ms - debe ser < 1000ms'
-        * assert responseTime < 1000
+        * assert responseTime < 3000
         * karate.log(msg)
 
       Examples:

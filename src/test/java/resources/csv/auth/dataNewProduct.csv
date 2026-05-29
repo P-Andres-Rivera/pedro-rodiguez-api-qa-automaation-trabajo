@@ -1,0 +1,15 @@
+codigo,nombre,medida,marca,categoria,precio,stock,estado,descripcion
+XP013,FuentePoderXP13,UND,Generico,Repuestos,400.00,60,3,Fuente de poder 500W
+XP014,TarjetaGraficaXP14,UND,Generico,Repuestos,1500.00,15,3,Tarjeta grafica NVIDIA GTX 1660
+XP015,ProcesadorXP15,UND,Generico,Repuestos,2000.00,25,3,Procesador Intel Core i7
+XP016,EnfriadorXP16,UND,Generico,Repuestos,250.00,40,3,Enfriador de CPU
+XP017,CajaPCXP17,UND,Generico,Repuestos,350.00,30,3,Caja para PC
+XP018,UnidadOpticaXP18,UND,Generico,Repuestos,150.00,50,3,Unidad optica DVD
+XP019,RedXP19,UND,Generico,Repuestos,100.00,80,3,Tarjeta de red Ethernet
+XP020,SonidoXP20,UND,Generico,Repuestos,200.00,60,3,Tarjeta de sonido
+
+
+
+
+
+
