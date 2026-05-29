@@ -1,0 +1,35 @@
+
+{
+  "registerUserSchema" : {
+    "data": {
+      "nombre"        : "#string",
+      "email"         : "#regex ^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$",
+      "password"      : "#regex ^\\$2[ayb]\\$\\d{2}\\$[./A-Za-z0-9]{53}$",
+      "estado"        : "#string",
+      "tipo_usuario_id": "#string",
+      "updated_at"    : "#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+Z$",
+      "created_at"    : "#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+Z$",
+      "id"            : "#number"
+    },
+    "access_token" : "#regex ^\\d+\\|[A-Za-z0-9]+$",
+    "token_type"   : "#string"
+  },
+  "registerUserInvalidSchema" : {
+    "email": "#[]"
+  },
+  "loginUserSchema" : {
+    "message"      : "#regex ^Hi.+$",
+    "access_token" : "#regex ^\\d+\\|[A-Za-z0-9]+$",
+    "token_type"   : "Bearer",
+    "user": {
+      "id"            : "#number",
+      "nombre"        : "#string",
+      "email"         : "#regex ^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$",
+      "password"      : "#regex ^\\$2[ayb]\\$\\d{2}\\$[./A-Za-z0-9]{53}$",
+      "estado"        : "#number",
+      "tipo_usuario_id": "#number",
+      "created_at"    : "#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{6}Z$",
+      "updated_at"    : "#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{6}Z$"
+    }
+  }
+}

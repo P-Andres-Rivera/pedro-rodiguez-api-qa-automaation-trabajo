@@ -5,5 +5,9 @@
     "nombre": "#(nombre)",
     "tipo_usuario_id": "#(tipo_usuario_id)",
     "estado": "#(estado)"
+  },
+  "loginUser" : {
+    "email": "#(email)",
+    "password": "#(password)"
   }
 }
