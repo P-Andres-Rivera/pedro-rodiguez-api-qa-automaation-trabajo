@@ -9,7 +9,7 @@ Feature: Registro de nuevos productos
     * def schemas = read('classpath:resources/json/schemas.json')
     * header Authorization = 'Bearer ' + tokenLogin
 
-  @registrarProducto @Succes
+  @registrarProducto @Succes @exitoso
   Scenario Outline: CP01 - Registrar nuevo producto
     Given path 'api','v1','producto'
     And request requests.registerNewProduct
@@ -31,7 +31,7 @@ Feature: Registro de nuevos productos
     Examples:
       | read('classpath:resources/csv/auth/dataNewProduct.csv').slice(0,1) |
 
-    @registrarProducto @Invalid
+    @registrarProducto @Invalid @exitoso
   Scenario Outline: CP02 - Registar producto duplicado
     Given path 'api','v1','producto'
     #And header Authorization = 'Bearer ' + tokenLogin
@@ -47,7 +47,7 @@ Feature: Registro de nuevos productos
     Examples:
       | read('classpath:resources/csv/auth/dataNewProduct.csv').slice(0,1) |
 
-    @registrarProducto @InvalidToken
+    @registrarProducto @InvalidToken @exitoso
   Scenario Outline: CP03 - Registrar producto sin token
     Given path 'api','v1','producto'
     And header Authorization = 'Bearer 9999|tokeninvalidoperovieneconformato'

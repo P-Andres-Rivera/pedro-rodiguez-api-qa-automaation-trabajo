@@ -3,7 +3,7 @@ Feature: Login de usuario
   Background:
     * url urlBase
 
-    @loginSuccess @token
+    @loginSuccess @token @exitoso
     Scenario Outline: CP001 - Login de usuario con datos válidos con da
         * def requests = read('classpath:resources/json/requests.json')
         * def schemas = read('classpath:resources/json/schemas.json')
@@ -26,7 +26,7 @@ Feature: Login de usuario
       Examples:
         | read('classpath:resources/csv/auth/dataRegister.csv') |
 
-    @loginFail
+    @loginFail @exitoso
     Scenario Outline: CP002 - Login de usuario con datos inválidos
         * def requests = read('classpath:resources/json/requests.json')
         * def schemas = read('classpath:resources/json/schemas.json')

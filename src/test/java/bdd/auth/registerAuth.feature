@@ -3,7 +3,7 @@ Feature: Registro de usuario
 Background:
   * url urlBase
 
-  @registroSucess
+  @registroSucess @exitoso
 Scenario Outline: CP001 - Registro de usuario con datos válidos
   * def requests = read('classpath:resources/json/requests.json')
   * def schemas = read('classpath:resources/json/schemas.json')
