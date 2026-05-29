@@ -1,12 +1,14 @@
 codigo,nombre,medida,marca,categoria,precio,stock,estado,descripcion
-XP013,FuentePoderXP13,UND,Generico,Repuestos,400.00,60,3,Fuente de poder 500W
-XP014,TarjetaGraficaXP14,UND,Generico,Repuestos,1500.00,15,3,Tarjeta grafica NVIDIA GTX 1660
-XP015,ProcesadorXP15,UND,Generico,Repuestos,2000.00,25,3,Procesador Intel Core i7
-XP016,EnfriadorXP16,UND,Generico,Repuestos,250.00,40,3,Enfriador de CPU
-XP017,CajaPCXP17,UND,Generico,Repuestos,350.00,30,3,Caja para PC
-XP018,UnidadOpticaXP18,UND,Generico,Repuestos,150.00,50,3,Unidad optica DVD
-XP019,RedXP19,UND,Generico,Repuestos,100.00,80,3,Tarjeta de red Ethernet
-XP020,SonidoXP20,UND,Generico,Repuestos,200.00,60,3,Tarjeta de sonido
+XP021,MemoriaRAMXP21,UND,Generico,Repuestos,300.00,35,3,Memoria RAM 16GB
+XP022,DiscoDuroXP22,UND,Generico,Repuestos,400.00,20,3,Disco duro 1TB
+XP023,FuentePoderXP23,UND,Generico,Repuestos,450.00,25,3,Fuente de poder 600W
+XP024,TarjetaGraficaXP24,UND,Generico,Repuestos,2000.00,10,3,Tarjeta grafica NVIDIA RTX 3060
+XP025,ProcesadorXP25,UND,Generico,Repuestos,2500.00,15,3,Procesador AMD Ryzen 7
+XP026,EnfriadorXP26,UND,Generico,Repuestos,300.00,20,3,Enfriador de CPU líquido
+XP027,CajaPCXP27,UND,Generico,Repuestos,400.00,25,3,Caja para PC con ventana
+XP028,UnidadOpticaXP28,UND,Generico,Repuestos,200.00,30,3,Unidad optica Blu-ray
+XP029,RedXP29,UND,Generico,Repuestos,150.00,40,3,Tarjeta de red Wi-Fi
+
 
 
 

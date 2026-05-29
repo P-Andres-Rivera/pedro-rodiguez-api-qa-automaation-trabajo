@@ -44,5 +44,8 @@
     "created_at": "#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{6}Z$",
     "updated_at": "#regex ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{6}Z$",
     "id": "#number"
+  },
+  "registerNewProductDuplicateSchema": {
+    "error": "#regex .*SQLSTATE\\[23000\\].*"
   }
 }
