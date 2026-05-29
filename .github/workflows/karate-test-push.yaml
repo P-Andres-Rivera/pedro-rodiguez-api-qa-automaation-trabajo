@@ -1,0 +1,34 @@
+name: Pruebas automáticas Karate - Todos
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v6
+
+      - name: Configurar Java Corretto 11 y Maven
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'corretto'
+          java-version: '11'
+
+      - name: Descargar dependencias
+        run: mvn dependency:resolve
+
+      - name: Ejecutar todas las pruebas Karate
+        run: mvn clean test -Dtest=ConfigTest
+
+      - name: Subir reporte de pruebas
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: karate-reports-all-push-${{ github.run_number }}
+          path: target/karate-reports/
+          retention-days: 30
